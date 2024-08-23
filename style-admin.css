@@ -1,0 +1,184 @@
+@font-face {
+  font-family: Sofia-Pro;
+  src: url(font/Sofia\ Pro\ Regular.ttf);
+}
+@font-face {
+  font-family: samsungS;
+  src: url(font/samsungsharpsans.otf);
+}
+@font-face {
+  font-family: samsungM;
+  src: url(font/samsungsharpsans-medium.otf);
+}
+@font-face {
+  font-family: samsungB;
+  src: url(font/samsungsharpsans-bold.otf);
+}
+:root {
+  --SamsungS: samsungS;
+  --SamsungM: samsungM;
+  --SamsungB: samsungB;
+  --Sophia-Pro: Sofia-Pro;
+  --Border-Outer: 28px;
+  --Gape-Large: 2rem;
+  --Gape-Mid: 1rem;
+  --Gape-Small: 0.5rem;
+  --Color-Primiry: rgb(0, 162, 255);
+  --Color-Secondary: rgb(134, 211, 255);
+  --Color-Totery: rgb(154, 212, 200);
+  --Padding: 3px 20px 3px 20px;
+  --shadow-white: 0.5rem 0.5rem 70px 10px rgba(0, 0, 0, 0.1);
+}
+* {
+  margin: 0;
+  font-family: var(--Sophia-Pro);
+  transition: all 0.3s;
+}
+.body {
+  margin: 0px;
+  padding: 0;
+  background-color: rgb(240, 240, 240);
+}
+.navbar {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  /* background-image: linear-gradient(
+      rgba(200, 200, 200, 0.75),
+      rgba(180, 180, 180, 0.75)
+    ); */
+  backdrop-filter: blur(15px);
+  transition: all 0.5s;
+  background-color: rgba(220, 220, 220, 0.75);
+}
+.navbar > ul {
+  margin: 0;
+  width: 100%;
+  padding: 0.3rem;
+  display: flex;
+  flex: 1;
+  transition: all 0.5s;
+}
+.navbar > ul > a {
+  font-family: var(--Sofia-pro);
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0 1rem 0 1rem;
+}
+.mainTitle {
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 3rem;
+  font-family: var(--SamsungB);
+  font-weight: bolder;
+}
+.btns > div {
+  box-sizing: border-box;
+  width: 35%;
+  height: 10rem;
+  padding: 1rem;
+  background-color: white;
+  margin-top: 1.5rem;
+  text-align: center;
+  align-content: center;
+  font-size: 1.5rem;
+  border-radius: var(--Border-Outer);
+  box-shadow: var(--shadow-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+}
+.btnAdd {
+  margin-left: 10%;
+  float: left;
+}
+.btnAdd > div > input {
+  background-color: var(--Color-Totery);
+  height: 2rem;
+  border-radius: var(--Border-Outer);
+  border: grey;
+  padding: 1rem 0.5rem 0rem 1rem;
+  box-sizing: border-box;
+  margin: 0.5rem;
+}
+.btnEdit {
+  margin-right: 10%;
+  float: right;
+}
+.btnDelete {
+  margin-right: 10%;
+  float: right;
+}
+.btnCmt {
+  margin-left: 10%;
+  float: left;
+}
+.btns > div > p > {
+  flex: 1;
+  font-family: var(--SamsungB);
+}
+.btns > div > .content {
+  flex: 4;
+}
+.done {
+  position: fixed;
+  bottom: -5rem;
+  right: 5%;
+  background-color: rgb(99, 180, 255);
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-radius: var(--Border-Outer);
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .txt-adsTitle {
+    font-size: 0.01rem;
+  }
+  .navbar {
+    box-sizing: border-box;
+    padding-top: 3rem;
+    overflow: hidden;
+    height: 3rem;
+    flex-direction: column;
+  }
+  .navbar.expn {
+    height: 22rem;
+    border-bottom-left-radius: var(--Border-Outer);
+    border-bottom-right-radius: var(--Border-Outer);
+  }
+  .pager {
+    height: 20rem;
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+  .navbar > ul > a {
+    text-align: start;
+  }
+  .btn-burger {
+    right: 1rem;
+    top: 0.75rem;
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .btn-burger > div {
+    width: 100%;
+    height: 20%;
+    background-color: black;
+  }
+  .btn-burger > .burger-stack2 {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+}

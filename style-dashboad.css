@@ -1,0 +1,239 @@
+@font-face {
+  font-family: Sofia-Pro;
+  src: url(font/Sofia\ Pro\ Regular.ttf);
+}
+@font-face {
+  font-family: samsungS;
+  src: url(font/samsungsharpsans.otf);
+}
+@font-face {
+  font-family: samsungM;
+  src: url(font/samsungsharpsans-medium.otf);
+}
+@font-face {
+  font-family: samsungB;
+  src: url(font/samsungsharpsans-bold.otf);
+}
+:root {
+  --SamsungS: samsungS;
+  --SamsungM: samsungM;
+  --SamsungB: samsungB;
+  --Sophia-Pro: Sofia-Pro;
+  --Border-Outer: 28px;
+  --Gape-Large: 2rem;
+  --Gape-Mid: 1rem;
+  --Gape-Small: 0.5rem;
+  --Color-Primiry: rgb(0, 162, 255);
+  --Color-Secondary: rgb(134, 211, 255);
+  --Color-Totery: rgb(154, 212, 200);
+  --Padding: 3px 20px 3px 20px;
+}
+* {
+  margin: 0;
+  font-family: var(--Sophia-Pro);
+  transition: all 0.3s;
+}
+.body {
+  margin: 0px;
+  padding: 0;
+  background-color: rgb(220, 220, 220);
+}
+.navbar {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  /* background-image: linear-gradient(
+    rgba(200, 200, 200, 0.75),
+    rgba(180, 180, 180, 0.75)
+  ); */
+  backdrop-filter: blur(15px);
+  transition: all 0.5s;
+  background-color: rgba(220, 220, 220, 0.75);
+}
+.navbar > ul {
+  margin: 0;
+  width: 100%;
+  padding: 0.3rem;
+  display: flex;
+  flex: 1;
+  transition: all 0.5s;
+}
+.navbar > ul > a {
+  font-family: var(--Sofia-pro);
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0 1rem 0 1rem;
+}
+.mainTitle {
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 3rem;
+  font-family: var(--SamsungB);
+  font-weight: bolder;
+}
+.monitor {
+  margin-top: 3rem;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+}
+.monitor > div {
+  text-align: center;
+  font-size: 1.5rem;
+  height: inherit;
+  flex: 1;
+  margin: 0 5% 0 5%;
+  border-radius: var(--Border-Outer);
+  background-color: white;
+  box-shadow: 0.5rem 0.5rem 70px 10px rgba(0, 0, 0, 0.1);
+}
+.table {
+  margin-top: 2rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  width: 100%;
+  height: max-content;
+  flex-direction: column;
+}
+.table > div {
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  width: inherit;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 10px 0;
+  background-color: rgb(230, 230, 230);
+  border-radius: var(--Border-Outer);
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+}
+.table > div > div {
+  text-align: center;
+  flex: 1;
+}
+.formHolder {
+  margin-top: 3rem;
+  width: 100%;
+  height: 5rem;
+  border-radius: var(--Border-Outer);
+  display: flex;
+}
+.formHolder > input {
+  box-sizing: border-box;
+  padding: 0 0.5rem 0 0.5rem;
+  flex: 1;
+  border: none;
+  margin: 1rem;
+  border-radius: var(--Border-Outer);
+  box-shadow: 0.5rem 0.5rem 70px 10px rgba(0, 0, 0, 0.1);
+}
+.btnAdd {
+  height: 3rem;
+  border-radius: var(--Border-Outer);
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  align-content: center;
+  margin: 1rem;
+  background-color: rgb(127, 253, 144);
+}
+.btnRemove {
+  height: 3rem;
+  border-radius: var(--Border-Outer);
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  align-content: center;
+  margin: 1rem;
+  background-color: rgb(248, 89, 89);
+}
+@media screen and (max-width: 600px) {
+  .txt-adsTitle {
+    font-size: 0.01rem;
+  }
+  .navbar {
+    box-sizing: border-box;
+    padding-top: 3rem;
+    overflow: hidden;
+    height: 3rem;
+    flex-direction: column;
+  }
+  .navbar.expn {
+    height: 22rem;
+    border-bottom-left-radius: var(--Border-Outer);
+    border-bottom-right-radius: var(--Border-Outer);
+  }
+  .pager {
+    height: 20rem;
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+  .navbar > ul > a {
+    text-align: start;
+  }
+  .btn-burger {
+    right: 1rem;
+    top: 0.75rem;
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .btn-burger > div {
+    width: 100%;
+    height: 20%;
+    background-color: black;
+  }
+  .btn-burger > .burger-stack2 {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+  .course01 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-course01 {
+    width: inherit;
+  }
+  .txt-course01 {
+    color: rgb(155, 154, 154);
+  }
+  .txt-course01 > p {
+    color: lightgray;
+  }
+  .monitor {
+    flex-direction: column;
+  }
+  .monitor > div {
+    text-align: left;
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+    width: inherit;
+    height: auto;
+    margin: 5px 0 5px 0;
+  }
+  .monitor > div > p {
+    text-align: end;
+    padding-right: 1.5rem;
+  }
+  .table {
+    margin-top: 5rem;
+  }
+  .formHolder {
+    flex-direction: column;
+    margin-top: 8rem;
+    height: 15rem;
+  }
+}

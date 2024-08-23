@@ -1,0 +1,147 @@
+@font-face {
+    font-family: Sophia-Pro;
+    src: url(font/Sofia\ Pro\ Regular.ttf);
+  }
+  :root {
+    --Sophia-Pro: Sophia-Pro;
+    --Border-Outer:15px;
+    --Gape-Large:2rem;
+    --Gape-Mid:1rem;
+    --Gape-Small:0.5rem;
+    --Color-Primiry: rgb(0, 162, 255);
+    --Color-Secondary:rgb(134, 211, 255);
+    --Color-Totery: rgb(154, 212, 200);
+    --Padding:3px 20px 3px 20px;
+  }
+  * {
+    margin: 0;
+    font-family: var(--Sophia-Pro);
+    transition: all 0.3s;
+  }
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .txt-signIn {
+      font-size: 3rem;
+      text-align: center;
+      font-weight: bolder;
+      color:var(--Color-Primiry)
+  }
+  input {
+      height: 2rem;
+      width: 20rem;
+      border: none;
+      padding:var(--Padding);
+      background-color:var(--Color-Totery);
+      border-radius: var(--Border-Outer);
+      margin: var(--Gape-Mid);
+  }
+  .noPass {
+    color: var(--Color-Primiry);
+  }
+  .noPass:hover {
+    cursor: pointer;
+  }
+  .haveAcc {
+    color: var(--Color-Primiry);
+  }
+  .haveAcc:hover {
+    cursor: pointer;
+  }
+  .container-btn-signIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: var(--Gape-Large);
+  }
+  .btn-signUp {
+    flex: 1;
+    border: none;
+    background-color: var(--Color-Secondary);
+    font-size: 1.5rem;
+    border-radius: var(--Border-Outer);
+    padding:var(--Padding);
+  }
+  .background {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    padding:0;
+    filter: blur(150px) saturate(0.5) hue-rotate(0deg);
+    animation-name: background-color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .background > div {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    animation-iteration-count: infinite;
+    scale: 1.5;
+  
+  }
+  .element01 {
+    background-color: rgba(83, 171, 243, 0.37);
+    margin-left: 10%;
+    rotate: 25deg;
+    animation-name: ele01;
+    animation-duration: 5s;
+  }
+  .element02 {
+    background-color: rgba(238, 124, 248, 0.479);
+    margin-left: 20%;
+    rotate: -30deg;
+    margin-top: 20%;
+    animation-name: ele02;
+    animation-duration: 5s;
+  }
+  .element03 {
+    background-color: rgba(161, 255, 137, 0.445);
+    margin-left: 30%;
+    rotate: 50deg;
+    animation-name: ele03;
+    animation-duration: 5s;
+  }
+  .element04 {
+    background-color: rgba(234, 255, 112, 0.493);
+    margin-left: 40%;
+    rotate: 170deg;
+    margin-top: 20%;
+    animation-name: ele04;
+    animation-duration: 5s;
+  }
+  
+  @media screen {
+      input {
+          width: 15rem;
+      }
+  }
+  @keyframes ele01 {
+    0% {margin-left: 80%; rotate: 24deg;}
+    50% {margin-left: 10%; rotate: 300deg;}
+    100%{margin-left: 80%;rotate: 24deg;}
+  }
+  @keyframes ele02 {
+    0% {margin-left: 50%; rotate: 240deg;}
+    50% {margin-left: 50%; rotate: -100deg;}
+    100%{margin-left: 50%;rotate: 240deg;}
+  }
+  @keyframes ele03 {
+    0% {margin-left: 70%; rotate: 204deg;}
+    50% {margin-left: 20%; rotate: 30deg;}
+    100%{margin-left: 70%;rotate: 204deg}
+  }
+  @keyframes ele04 {
+    0% {margin-left: 10%; rotate: 120deg;}
+    50% {margin-left: 80%; rotate: -200deg;}
+    100%{margin-left: 10%;rotate: 120deg;}
+  }
+  @keyframes background-color {
+    0% {filter: blur(150px) saturate(0.5) hue-rotate(0deg);}
+    50% {filter: blur(150px) saturate(0.5) hue-rotate(360deg);}
+    100% {filter: blur(150px) saturate(0.5) hue-rotate(0deg);}
+  }
